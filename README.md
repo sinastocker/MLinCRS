@@ -27,7 +27,7 @@ Reaction network with bond breaking reactions of types A - > B + C
 (reaction type I) or A -> B (reaction type II) stored in a .txt file.
 Each row is a sepatate reaction. The file consists of 4 columns.
 
-Column      Content
+Column      Content:
 
 1           Index of molecule A (molecule id in .xyz file)
 
