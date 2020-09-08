@@ -8,17 +8,17 @@ def kPCA(K):
 
     Input:
     ------
-    K : np.array
+    K : np.array (N, N)
         Kernel matrix for which you want to
         perform a kPCA
 
     Returns:
     --------
-    x1 : np.array
+    x1 : np.array, (N)
         PC1
-    x2 : np.array
+    x2 : np.array, (N)
         PC2
-    x3 : np.array
+    x3 : np.array, (N)
         PC3
     """
     # centralize K - this is the equivalent of the mean shift

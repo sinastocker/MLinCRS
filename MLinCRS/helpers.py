@@ -1,11 +1,13 @@
 import errno
 import os
 
+
 def mkdir_p(path):
     """
     Creates directory with parent directory as needed
     (similar to 'mkdir -p ${path}').
     Does not raise an error if directory exists
+
     Inputs:
     -------
     path:   type(str)
@@ -18,4 +20,3 @@ def mkdir_p(path):
         else:
             raise err
     return
-
