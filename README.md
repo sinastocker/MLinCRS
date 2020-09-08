@@ -27,15 +27,15 @@ Reaction network with bond breaking reactions of types A - > B + C
 (reaction type I) or A -> B (reaction type II) stored in a .txt file.
 Each row is a sepatate reaction. The file consists of 4 columns.
 
-**Column <br/>  Content**
+**Column <space>  Content**
 
-1 <br/>  Index of molecule A (molecule id in .xyz file)
+1 <space>  Index of molecule A (molecule id in .xyz file)
 
-2 <br/>  Index of molecule B (molecule id in .xyz file)
+2 <space>  Index of molecule B (molecule id in .xyz file)
 
-3 <br/>  Index of molecule C (molecule id in .xyz file), reaction type I or "[x]", reaction type II
+3 <space>  Index of molecule C (molecule id in .xyz file), reaction type I or "[x]", reaction type II
 
-4 <br/>  DFT calculated Reaction energy (RE) [eV], RE = sum(AE(products)) - AE(educt)
+4 <space>  DFT calculated Reaction energy (RE) [eV], RE = sum(AE(products)) - AE(educt)
 
 ### Authors
 Sina Stocker (sina.stocker@tum.de)
