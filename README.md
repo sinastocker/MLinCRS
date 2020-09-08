@@ -18,9 +18,9 @@ Requirements for Example_tutorial.ipynb are:
 * QUIP, quippy, GAP https://libatoms.github.io/GAP/installation.html
 
 ### Data formats
-Molecular database stored in a extended .xyz file. This file serves as
+Molecular database stored in an extended .xyz file. This file serves as
 input for the preparation of the kernel matrices.
-The molecule info line has to contain a `id` and `AE` keyword, which is
+The molecule info line has to contain an `id` and `AE` keyword, which is
 the id of the molecule in the database and the atomization energy.
 
 Reaction network with bond breaking reactions of types A - > B + C
