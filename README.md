@@ -37,6 +37,7 @@ Each row is a sepatate reaction. The file consists of 4 columns.
 3         Index of molecule C (molecule id in .xyz file), reaction type I or "[x]", reaction type II
 
 4         DFT calculated Reaction energy (RE) [eV], RE = sum(AE(products)) - AE(educt)
+</pre>
 
 ### Authors
 Sina Stocker (sina.stocker@tum.de)
