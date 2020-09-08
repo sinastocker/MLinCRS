@@ -1,4 +1,5 @@
 import numpy as np
+from collections import deque
 
 
 def read_reaction_network_g0(filename, highest_id_molecules):
@@ -30,14 +31,14 @@ def read_reaction_network_g0(filename, highest_id_molecules):
     # Transfrom highest_id_molecules in an integer
     highest_id_molecules = int(highest_id_molecules)
     # Read the educt indices
-    e = np.loadtxt(filename, delimiter=',', usecols=[0,]).astype(int)
+    e = np.loadtxt(filename, delimiter=',', usecols=[0, ]).astype(int)
     # Read the product indices from molecules B
-    p1 = np.loadtxt(filename, delimiter=',', usecols=[1,]).astype(int)
+    p1 = np.loadtxt(filename, delimiter=',', usecols=[1, ]).astype(int)
     # Read the product indices from molecules C
-    p2_store = np.loadtxt(filename, delimiter=',', usecols=[2,], dtype=str)
+    p2_store = np.loadtxt(filename, delimiter=',', usecols=[2, ], dtype=str)
 
     # Check whether reaction is of type A -> B + C or A -> B.
-    p2 = []
+    p2 = deque()
     for p_i in p2_store:
         try:
             p = int(p_i)
@@ -49,7 +50,7 @@ def read_reaction_network_g0(filename, highest_id_molecules):
     p2 = np.asarray(p2)
 
     # Read reaction energie
-    Y_re = np.loadtxt(filename, delimiter=',', usecols=[3,])
+    Y_re = np.loadtxt(filename, delimiter=',', usecols=[3, ])
     return e, p1, p2, Y_re
 
 
@@ -61,6 +62,6 @@ def append_energy_4_rearrangements(E):
     Inputs:
     -------
     E : np.array, N
-        Energies for which zero should be added.
+        Energy array for which a zero value should be added.
     """
     return np.hstack((E, 0))
