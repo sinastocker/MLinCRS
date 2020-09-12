@@ -7,7 +7,7 @@ Requirements for Example_tutorial.ipynb are:
 
 * python            >= 3.7
 * ase               >= 3.19.1
-* numpy             >= 1.16.1
+* numpy             >= 1.19.0
 * scikit-learn      >= 0.23.1
 * jupyter-notebook  >= 6.1.3
 * matplotlib        >= 3.3.0
