@@ -20,6 +20,9 @@ def kPCA(K):
         PC2
     x3 : np.array, (N)
         PC3
+    v_sort : np.array, (3)
+        Three highest eigenvalues that
+        correspond to PC1, PC2 and PC3
     """
     # centralize K - this is the equivalent of the mean shift
     one = 1.0/K.shape[0] * np.ones((K.shape[0], K.shape[1]))
@@ -35,4 +38,6 @@ def kPCA(K):
     x2 = np.matmul(-K, F[:, idx[1]])
     x3 = np.matmul(-K, F[:, idx[2]])
 
-    return x1, x2, x3
+    # Join three highest eigenvalues together in an array
+    v_sort = v[idx[:3]]
+    return x1, x2, x3, v_sort
